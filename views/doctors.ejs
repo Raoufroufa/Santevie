@@ -1,0 +1,28 @@
+
+<%- include("partials/header"); -%>
+
+<h1>Doctors</h1>
+
+<form action="/doctors" method="post">
+    <label for="">ID</label>
+    <input type="text" name="id">
+    <label for="">First Name</label>
+    <input type="text" name="F_N">
+    <label for="">Last Name</label>
+    <input type="text" name="L_N">
+    <label for="">Gender</label>
+    <input type="text" name="gender">
+    <label for="">Phone</label>
+    <input type="number" name="phone"> <br> <br>
+    <label for="">Password</label>
+    <input type="password" name="password">
+    <label for="">Field</label>
+    <input type="text" name="field">
+    <label for="">Fees</label>
+    <input type="number" name="fees"> <br> <br>
+    <button type="submit">Add doctor</button>
+</form>
+
+
+
+

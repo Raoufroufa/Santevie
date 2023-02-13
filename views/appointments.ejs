@@ -1,0 +1,64 @@
+
+<%- include("partials/header"); -%>
+
+<h1>Appointments</h1>
+
+<form action="/appointments" method="post">
+    <label for="">ID</label>
+    <input type="text" name="id">
+    <label for="">Patient ID</label>
+    <input type="text" name="patient_id">
+    <label for="">Doctor ID</label>
+    <input type="text" name="doctor_id">
+    <label for="">Booked date</label>
+    <input type="date" name="booked_date">
+    <label for="">Patient description</label>
+    <input type="text" name="patient_description">
+    <label for="">Time</label>
+    <input type="number" name="hour"> <br> <br>
+    <button type="submit">Add appointment</button>
+</form>
+
+<head>
+    <title>Appointments Display</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>patient_id</th>
+            <th>doctor_id</th>
+            <th>booked_date</th>
+            <th>patient_description</th>
+            <th>hour</th>
+            
+        </tr>
+        <% data.forEach(function(row) { %>
+            <tr>
+                <td>
+                    <%= row.column1 %>
+                </td>
+                <td>
+                    <%= row.column2 %>
+                </td>
+                <td>
+                    <%= row.column3 %>
+                </td>
+                <td>
+                    <%= row.column4 %>
+                </td>
+                <td>
+                    <%= row.column5 %>
+                </td>
+                <td>
+                    <%= row.column6 %>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+</body>
+
+</html>
+
+
